@@ -60,4 +60,32 @@ public class MyBinarySearchTree<K extends Comparable<K>> {
             inOrderTraversalRecursive(node.right);
         }
     }
+    /*
+     * @name:search
+     * @desc: used to search for a node in the binary search tree.
+     * @param: K key
+     * @return: boolean
+     */
+    public boolean search(K key) {
+        return searchRecursive(root, key);
+    }
+    /*
+     * @name:searchRecursive
+     * @desc: used to search for a node in the binary search tree recursively.
+     * @param: MyBinaryNode<K> node, K key
+     * @return: boolean
+     */
+    private boolean searchRecursive(MyBinaryNode<K> node, K key) {
+        if (node == null) {
+            return false;
+        }
+
+        if (key.equals(node.key)) {
+            return true;
+        } else if (key.compareTo(node.key) < 0) {
+            return searchRecursive(node.left, key);
+        } else {
+            return searchRecursive(node.right, key);
+        }
+    }
 }

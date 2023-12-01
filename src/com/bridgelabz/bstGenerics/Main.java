@@ -21,5 +21,13 @@ public class Main {
         // Displaying the in-order traversal of the BST
         System.out.println("In-order traversal of the BST:");
         bst.inOrderTraversal();
+        int keyToSearch = 63;
+        boolean isFound = bst.search(keyToSearch);
+
+        if (isFound) {
+            System.out.println("\nKey " + keyToSearch + " found");
+        } else {
+            System.out.println("\nKey " + keyToSearch + " not found");
+        }
     }
 }
