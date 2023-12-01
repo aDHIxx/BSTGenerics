@@ -1,10 +1,10 @@
-/*
+package com.bridgelabz.bstGenerics;/*
  * @name:MyBinarySearchTree
  * @description: used to create a binary search tree.
  * @param: K extends Comparable<K>
  */
 
-class MyBinarySearchTree<K extends Comparable<K>> {
+public class MyBinarySearchTree<K extends Comparable<K>> {
     private MyBinaryNode<K> root;
 
     public MyBinarySearchTree() {
